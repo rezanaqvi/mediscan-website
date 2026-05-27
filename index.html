@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediScan - Digitizing Healthcare in Pakistan</title>
+  <meta name="description" content="MediScan is a QR-based healthcare platform connecting doctors, patients, and clinics. Digitizing prescriptions, medical records, and appointments across Pakistan." />
+  <meta property="og:title" content="MediScan - Digitizing Healthcare in Pakistan" />
+  <meta property="og:description" content="QR-based healthcare platform connecting doctors, patients, and clinics." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="currentColor"/>
+            <path d="M10 16h12M16 10v12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span>MediScan</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#features">Features</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#team">Team</a>
+        <a href="#traction">Traction</a>
+      </div>
+      <div class="nav-actions">
+        <a href="app/" class="btn btn-ghost" target="_blank">Login</a>
+        <a href="#contact" class="btn btn-primary">Get Early Access</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="container">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Now in Beta — Join the Early Access
+      </div>
+      <h1 class="hero-title">
+        Digitizing Healthcare<br/>
+        <span class="gradient-text">Across Pakistan</span>
+      </h1>
+      <p class="hero-subtitle">
+        MediScan connects doctors, patients, and clinics through QR-based digital prescriptions,
+        smart medication tracking, and seamless medical record management. Replacing paper prescriptions
+        for 230M+ people.
+      </p>
+      <div class="hero-cta">
+        <a href="demo.html" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Demo
+        </a>
+        <a href="https://expo.dev/artifacts/eas/x7YzZWubxjzbK4HdRFcH5q.apk" class="btn btn-outline btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Android App
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">230M+</span>
+          <span class="stat-label">Target Market</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">85%</span>
+          <span class="stat-label">Paper Prescriptions</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Stakeholder Portals</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">< 30s</span>
+          <span class="stat-label">To Write Prescription</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM ===================== -->
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Problem</span>
+        <h2>Healthcare in Pakistan is Broken</h2>
+        <p class="section-desc">Pakistan's healthcare system relies on fragmented paper records, illegible prescriptions, and zero digital infrastructure connecting stakeholders.</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon red">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3>Paper Prescriptions</h3>
+          <p>85% of prescriptions are handwritten, often illegible, leading to medication errors and no digital trail for follow-ups.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon orange">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>No Patient History</h3>
+          <p>Patients carry physical folders of reports. Doctors have no access to prior medical history, leading to redundant tests and misdiagnosis.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon yellow">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Medication Errors</h3>
+          <p>WHO estimates 1.3M deaths/year from medication errors globally. Pakistan lacks any system to verify prescriptions digitally.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>Zero Interoperability</h3>
+          <p>Clinics, hospitals, and pharmacies operate in silos. No shared platform exists to unify patient data across providers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOLUTION ===================== -->
+  <section class="section section-dark" id="solution">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag light">Our Solution</span>
+        <h2>One QR Code. Complete Medical Identity.</h2>
+        <p class="section-desc">Every patient gets a unique QR code. Doctors scan it to access history, write digital prescriptions, and track medications. Everything syncs in real-time.</p>
+      </div>
+      <div class="solution-flow">
+        <div class="flow-step">
+          <div class="flow-number">1</div>
+          <div class="flow-content">
+            <h3>Patient Signs Up</h3>
+            <p>Creates account via mobile app or web. Gets a unique QR code as their medical identity.</p>
+          </div>
+        </div>
+        <div class="flow-arrow">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="flow-step">
+          <div class="flow-number">2</div>
+          <div class="flow-content">
+            <h3>Doctor Scans QR</h3>
+            <p>Instantly pulls up patient history, vitals, past prescriptions, and lab results.</p>
+          </div>
+        </div>
+        <div class="flow-arrow">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="flow-step">
+          <div class="flow-number">3</div>
+          <div class="flow-content">
+            <h3>Digital Prescription</h3>
+            <p>Doctor writes prescription digitally with vitals, medications, dosage, and lab requests. PDF auto-generated.</p>
+          </div>
+        </div>
+        <div class="flow-arrow">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="flow-step">
+          <div class="flow-number">4</div>
+          <div class="flow-content">
+            <h3>Track + Access Anywhere</h3>
+            <p>Patients track medications, download PDF prescriptions, upload lab reports, and access their full history from any device.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Platform Features</span>
+        <h2>Built for Every Stakeholder</h2>
+        <p class="section-desc">Three dedicated portals. One unified platform.</p>
+      </div>
+
+      <!-- Stakeholder tabs -->
+      <div class="feature-tabs">
+        <button class="tab-btn active" data-tab="doctor">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          For Doctors
+        </button>
+        <button class="tab-btn" data-tab="patient">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          For Patients
+        </button>
+        <button class="tab-btn" data-tab="admin">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          For Clinics/Admin
+        </button>
+      </div>
+
+      <!-- Doctor Features -->
+      <div class="tab-content active" id="tab-doctor">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            </div>
+            <h4>QR Code Scanner</h4>
+            <p>Scan patient QR to instantly access their full medical profile and history.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h4>Digital Prescriptions</h4>
+            <p>Write prescriptions with medications, dosage, frequency, vitals, and lab requests. Auto-generates PDF.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h4>Patient Management</h4>
+            <p>View all patients, their records, past prescriptions, and upcoming appointments in one dashboard.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h4>Appointments</h4>
+            <p>Manage appointment slots, patient bookings, and schedule with calendar integration.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h4>Vitals Tracking</h4>
+            <p>Record blood pressure, sugar levels, and other vitals directly in prescriptions.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>PMC Verified</h4>
+            <p>Doctors verify with Pakistan Medical Commission license number. Admin approves credentials.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Patient Features -->
+      <div class="tab-content" id="tab-patient">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01M7 12h.01M7 17h.01M12 7h.01M12 12h.01M12 17h.01M17 7h.01M17 12h.01"/></svg>
+            </div>
+            <h4>Personal QR Code</h4>
+            <p>Your unique medical identity. Show it to any doctor for instant access to your history.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h4>Prescription Details</h4>
+            <p>Every prescription shows medications, dosage, frequency, duration, and doctor notes in a clear, readable format.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h4>Medication Tracker</h4>
+            <p>Set reminders and track daily medication intake. Never miss a dose again.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+            </div>
+            <h4>Medical Records</h4>
+            <p>Upload and organize lab reports, X-rays, and documents in folders. Access anywhere.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <h4>PDF Downloads</h4>
+            <p>Download prescription PDFs with complete doctor info, medications, vitals, and clinic details.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h4>Appointment Booking</h4>
+            <p>Book appointments with doctors, view upcoming visits, and get clinic directions with integrated maps.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin Features -->
+      <div class="tab-content" id="tab-admin">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Doctor Verification</h4>
+            <p>Review and approve doctor registrations. Verify PMC license numbers before granting access.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h4>User Management</h4>
+            <p>Manage all doctors, patients, and staff. View activity, suspend accounts, and handle disputes.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+            </div>
+            <h4>Audit Logs</h4>
+            <p>Complete audit trail of all actions. Track who accessed what, when, for compliance and security.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h4>Analytics Dashboard</h4>
+            <p>Platform-wide statistics: active users, prescriptions generated, appointments, and growth metrics.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <h4>Subscription Management</h4>
+            <p>Manage clinic subscriptions, billing, and feature tiers for different plan levels.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h4>System Health</h4>
+            <p>Monitor API performance, uptime, error rates, and infrastructure health in real-time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEMO ===================== -->
+  <section class="section section-dark" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag light">Live Product</span>
+        <h2>See MediScan in Action</h2>
+        <p class="section-desc">Our platform is live and functional. Try it with demo accounts.</p>
+      </div>
+      <div class="demo-grid">
+        <div class="demo-card">
+          <div class="demo-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <h3>Doctor Portal</h3>
+          </div>
+          <ul class="demo-features">
+            <li>Scan patient QR codes</li>
+            <li>Write digital prescriptions</li>
+            <li>Record vitals (BP, sugar)</li>
+            <li>Request lab tests</li>
+            <li>View patient history</li>
+            <li>Manage appointments</li>
+          </ul>
+          <div class="demo-creds">
+            <p><strong>Demo Login:</strong></p>
+            <code>doctor@demo.com / password123</code>
+          </div>
+        </div>
+        <div class="demo-card highlight">
+          <div class="demo-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <h3>Patient Portal</h3>
+          </div>
+          <ul class="demo-features">
+            <li>View all prescriptions</li>
+            <li>Detailed medication info</li>
+            <li>Medication tracking</li>
+            <li>Download PDF prescriptions</li>
+            <li>Upload medical records</li>
+            <li>Book appointments</li>
+          </ul>
+          <div class="demo-creds">
+            <p><strong>Demo Login:</strong></p>
+            <code>patient@demo.com / password123</code>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <h3>Admin Portal</h3>
+          </div>
+          <ul class="demo-features">
+            <li>Verify doctor credentials</li>
+            <li>User management</li>
+            <li>Platform analytics</li>
+            <li>Audit logs</li>
+            <li>System monitoring</li>
+            <li>Subscription management</li>
+          </ul>
+          <div class="demo-creds">
+            <p><strong>Demo Login:</strong></p>
+            <code>admin@demo.com / password123</code>
+          </div>
+        </div>
+      </div>
+      <div class="demo-links">
+        <a href="app/" class="btn btn-primary btn-lg" target="_blank">Launch Web App</a>
+        <a href="https://expo.dev/artifacts/eas/x7YzZWubxjzbK4HdRFcH5q.apk" class="btn btn-outline btn-lg" target="_blank">Download Android APK</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TECH STACK ===================== -->
+  <section class="section" id="tech">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technology</span>
+        <h2>Built with Modern Stack</h2>
+        <p class="section-desc">Production-grade architecture designed for scale.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h4>React Native + Expo</h4>
+          <p>Cross-platform mobile app</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h4>React + Vite</h4>
+          <p>Fast web application</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h4>Express + Node.js</h4>
+          <p>RESTful API server</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h4>PostgreSQL + Drizzle</h4>
+          <p>Type-safe database ORM</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>OpenAPI + Orval</h4>
+          <p>Type-safe API codegen</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 00-6.88 17.23A5 5 0 0112 15a5 5 0 016.88 4.23A10 10 0 0012 2z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>PDFKit</h4>
+          <p>Prescription PDF generation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ROADMAP ===================== -->
+  <section class="section section-dark" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag light">Roadmap</span>
+        <h2>Our Journey</h2>
+        <p class="section-desc">From MVP to market dominance in Pakistan's healthcare digitization.</p>
+      </div>
+      <div class="roadmap">
+        <div class="roadmap-line"></div>
+        <div class="roadmap-item completed">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-phase">Phase 1 - Complete</span>
+            <h3>Planning & Research (Q1 2026)</h3>
+            <ul>
+              <li>Market research across clinics in Karachi & Lahore</li>
+              <li>Doctor and patient pain-point interviews</li>
+              <li>Technical architecture and stack decisions</li>
+              <li>Regulatory landscape assessment (PMC, DRAP)</li>
+              <li>Competitive analysis of existing solutions</li>
+              <li>Core feature prioritization and wireframing</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item current">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-phase">Phase 2 - In Progress</span>
+            <h3>Building the Application (Q2 2026)</h3>
+            <ul>
+              <li>Full-stack web app (React + Express + PostgreSQL)</li>
+              <li>Mobile app (React Native + Expo) — Android APK live</li>
+              <li>QR-based patient identity and doctor scanning</li>
+              <li>Digital prescriptions with vitals, medications, lab requests</li>
+              <li>PDF prescription generation with clinic letterhead</li>
+              <li>Appointment booking and medical record uploads</li>
+              <li>Admin panel with doctor PMC verification</li>
+              <li>Onboarding first doctors and patients by end of Q2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item future">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-phase">Phase 3 - Q3 2026</span>
+            <h3>Clinic Onboarding & Integrations</h3>
+            <ul>
+              <li>Onboard multiple clinics in Karachi & Lahore</li>
+              <li>Lab integration (auto-import test results via QR)</li>
+              <li>Connect with local pharmacy stores for prescription fulfillment</li>
+              <li>Payment gateway integration for appointment fees</li>
+              <li>Partner with major online medical stores (Dawaai, etc.)</li>
+              <li>AI-powered prescription insights (GPT integration)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="roadmap-item future">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-phase">Phase 4 - Q4 2026</span>
+            <h3>Fully Fledged Platform</h3>
+            <ul>
+              <li>Fully operational across multiple cities</li>
+              <li>Insurance provider integrations</li>
+              <li>Telemedicine / video consultations</li>
+              <li>Hospital management system (HMS) compatibility</li>
+              <li>Government health registry interoperability</li>
+              <li>Expansion roadmap for South Asian markets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MARKET ===================== -->
+  <section class="section" id="market">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Market Opportunity</span>
+        <h2>$15B+ Healthcare IT Market</h2>
+        <p class="section-desc">Pakistan's healthcare digitization is inevitable. We're building the infrastructure.</p>
+      </div>
+      <div class="market-grid">
+        <div class="market-card">
+          <span class="market-number">230M+</span>
+          <h4>Population</h4>
+          <p>5th largest country. Growing 2% annually. Massive underserved market.</p>
+        </div>
+        <div class="market-card">
+          <span class="market-number">270K+</span>
+          <h4>Registered Doctors</h4>
+          <p>PMC-registered doctors with zero digital prescription tools.</p>
+        </div>
+        <div class="market-card">
+          <span class="market-number">$4.2B</span>
+          <h4>Healthcare Spend</h4>
+          <p>Annual healthcare expenditure growing 12% year-over-year.</p>
+        </div>
+        <div class="market-card">
+          <span class="market-number">< 5%</span>
+          <h4>Digital Adoption</h4>
+          <p>Virtually no digital health records. Greenfield opportunity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRACTION ===================== -->
+  <section class="section section-dark" id="traction">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag light">Traction</span>
+        <h2>What We've Built</h2>
+        <p class="section-desc">Fully functional product, ready for pilot deployment.</p>
+      </div>
+      <div class="traction-grid">
+        <div class="traction-item">
+          <div class="traction-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h4>Full-Stack Platform Live</h4>
+            <p>Web app, mobile app (Android), and API server deployed and operational.</p>
+          </div>
+        </div>
+        <div class="traction-item">
+          <div class="traction-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h4>3 Stakeholder Portals</h4>
+            <p>Dedicated dashboards for doctors, patients, and administrators with role-based access.</p>
+          </div>
+        </div>
+        <div class="traction-item">
+          <div class="traction-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h4>Medication Tracking</h4>
+            <p>Patients can track daily medication intake and view complete prescription history.</p>
+          </div>
+        </div>
+        <div class="traction-item">
+          <div class="traction-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h4>QR-Based Patient ID</h4>
+            <p>Unique QR code per patient. Doctors scan to access full medical profile instantly.</p>
+          </div>
+        </div>
+        <div class="traction-item">
+          <div class="traction-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h4>PDF Prescription Generation</h4>
+            <p>Professional PDFs with doctor details, patient info, vitals, medications, and lab requests.</p>
+          </div>
+        </div>
+        <div class="traction-item">
+          <div class="traction-check">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h4>Production Infrastructure</h4>
+            <p>Railway-hosted API, Supabase PostgreSQL, EAS-built mobile apps. Ready to scale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEAM ===================== -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Team</span>
+        <h2>The People Behind MediScan</h2>
+        <p class="section-desc">A passionate team solving healthcare's biggest challenge in Pakistan.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">
+            <div class="avatar-placeholder">SR</div>
+          </div>
+          <h3>Syed Faizan Raza</h3>
+          <span class="team-role">Founder & CEO</span>
+          <p>Full-stack engineer with deep expertise in healthcare technology. Building MediScan to transform how 230M+ Pakistanis access healthcare.</p>
+          <div class="team-links">
+            <a href="https://github.com/rezanaqvi" target="_blank" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="mailto:syedfai97@gmail.com" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Add more team members here -->
+        <div class="team-card team-join">
+          <div class="team-avatar">
+            <div class="avatar-placeholder join">+</div>
+          </div>
+          <h3>Join Our Team</h3>
+          <span class="team-role">We're Hiring</span>
+          <p>Looking for passionate engineers, designers, and healthcare professionals who want to make a real impact.</p>
+          <a href="mailto:syedfai97@gmail.com" class="btn btn-outline btn-sm">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA / CONTACT ===================== -->
+  <section class="section section-cta" id="contact">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Digitize Healthcare?</h2>
+        <p>Whether you're a clinic looking to go digital, an investor interested in Pakistan's healthcare future, or a developer who wants to make impact - we'd love to hear from you.</p>
+        <div class="cta-buttons">
+          <a href="mailto:syedfai97@gmail.com" class="btn btn-white btn-lg">Contact Us</a>
+          <a href="https://github.com/rezanaqvi/mediscan-website" class="btn btn-outline-white btn-lg" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M10 16h12M16 10v12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <span>MediScan</span>
+          </a>
+          <p>Digitizing healthcare across Pakistan. One QR code at a time.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#demo">Live Demo</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#tech">Tech Stack</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="#team">Team</a>
+          <a href="#traction">Traction</a>
+          <a href="#market">Market</a>
+          <a href="mailto:syedfai97@gmail.com">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <a href="https://github.com/rezanaqvi/mediscan-website" target="_blank">GitHub</a>
+          <a href="https://expo.dev/artifacts/eas/x7YzZWubxjzbK4HdRFcH5q.apk" target="_blank">Android App</a>
+          <a href="https://mediscan-api-production-5e55.up.railway.app" target="_blank">API Server</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MediScan. All rights reserved.</p>
+        <p>Built in Pakistan for Pakistan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

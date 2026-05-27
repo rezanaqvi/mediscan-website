@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MediScan</title>
+  <script>
+    // SPA redirect: convert path to query string so index.html can restore it
+    var seg = location.pathname.replace('/mediscan-website/app', '').replace(/^\/+/, '');
+    if (seg) {
+      location.replace(
+        location.origin + '/mediscan-website/app/?p=/' + seg + location.search + location.hash
+      );
+    } else {
+      location.replace(location.origin + '/mediscan-website/app/');
+    }
+  </script>
+</head>
+<body></body>
+</html>
