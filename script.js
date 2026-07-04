@@ -177,3 +177,56 @@ if (window.VanillaTilt && !matchMedia('(prefers-reduced-motion: reduce)').matche
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
   targets.forEach((t) => io.observe(t));
 })();
+
+// ============================================================
+// Count-up stats (keeps prefix/suffix like $, M+, %, < , s)
+// ============================================================
+(function () {
+  function countEl(el) {
+    const raw = el.dataset.raw || el.textContent.trim();
+    el.dataset.raw = raw;
+    const m = raw.match(/-?\d[\d,]*\.?\d*/);
+    if (!m) return;
+    const numStr = m[0].replace(/,/g, '');
+    const target = parseFloat(numStr);
+    const decimals = (numStr.split('.')[1] || '').length;
+    const pre = raw.slice(0, m.index);
+    const suf = raw.slice(m.index + m[0].length);
+    const dur = 1400, t0 = performance.now();
+    function step(now) {
+      const p = Math.min((now - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = (target * eased).toFixed(decimals);
+      el.textContent = pre + val + suf;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = raw;
+    }
+    requestAnimationFrame(step);
+  }
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((en) => { if (en.isIntersecting) { countEl(en.target); io.unobserve(en.target); } });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat-number, .market-number').forEach((el) => io.observe(el));
+})();
+
+// ============================================================
+// Solution QR-flow: sequential pop-in + pulsing scan accent
+// ============================================================
+(function () {
+  const steps = document.querySelectorAll('.solution-flow .flow-step');
+  if (!steps.length) return;
+  steps.forEach((s, i) => {
+    s.style.opacity = '0';
+    s.style.transform = 'translateY(24px) scale(.96)';
+    s.style.transition = `opacity .6s ease ${i * 0.18}s, transform .6s cubic-bezier(.2,.8,.2,1) ${i * 0.18}s`;
+  });
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((en) => {
+      if (en.isIntersecting) {
+        steps.forEach((s) => { s.style.opacity = '1'; s.style.transform = 'none'; });
+        io.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  io.observe(steps[0]);
+})();
