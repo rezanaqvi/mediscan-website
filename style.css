@@ -944,3 +944,72 @@ body {
   .section { padding: 64px 0; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Dynamic 3D layer — floating organs, gradient orbs, tilt
+   ============================================================ */
+.hero { position: relative; overflow: hidden; perspective: 1200px; }
+
+/* animated gradient orbs behind the hero */
+.hero-orbs { position: absolute; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
+.hero-orbs .orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .5; will-change: transform; }
+.orb-1 { width: 420px; height: 420px; background: radial-gradient(circle,#2dd4bf,transparent 70%); top: -80px; left: -60px; animation: orbDrift 18s ease-in-out infinite alternate; }
+.orb-2 { width: 360px; height: 360px; background: radial-gradient(circle,#22d3ee,transparent 70%); bottom: -100px; right: -40px; animation: orbDrift 22s ease-in-out infinite alternate-reverse; }
+.orb-3 { width: 300px; height: 300px; background: radial-gradient(circle,#7c3aed,transparent 70%); top: 30%; right: 25%; opacity:.28; animation: orbDrift 26s ease-in-out infinite alternate; }
+@keyframes orbDrift { from { transform: translate(0,0) scale(1); } to { transform: translate(60px,40px) scale(1.15); } }
+
+/* floating 3D organ art */
+.hero-scene { position: absolute; inset: 0; z-index: 1; pointer-events: none; transform-style: preserve-3d; }
+.hero-scene .organ {
+  position: absolute; width: 92px; height: auto; will-change: transform;
+  filter: drop-shadow(0 18px 26px rgba(2,44,34,.28));
+  animation: floaty 7s ease-in-out infinite alternate;
+}
+.hero-scene .o1 { top: 14%; left: 5%;  width: 104px; animation-delay: 0s; }
+.hero-scene .o2 { top: 20%; right: 7%; width: 92px;  animation-delay: -1.2s; }
+.hero-scene .o3 { bottom: 20%; left: 8%; width: 96px; animation-delay: -2.4s; }
+.hero-scene .o4 { top: 44%; left: 2%;  width: 60px;  animation-delay: -0.6s; }
+.hero-scene .o5 { bottom: 30%; right: 11%; width: 68px; animation-delay: -3s; }
+.hero-scene .o6 { top: 9%;  right: 24%; width: 58px;  animation-delay: -1.8s; }
+.hero-scene .o7 { bottom: 12%; right: 5%; width: 86px; animation-delay: -2.1s; }
+.hero-scene .o8 { top: 56%; right: 3%;  width: 60px;  animation-delay: -0.9s; }
+@keyframes floaty {
+  from { transform: translateY(-10px) rotate(-4deg); }
+  to   { transform: translateY(14px)  rotate(5deg); }
+}
+.hero .container { position: relative; z-index: 2; }
+
+/* 3D tilt cards */
+[data-tilt] { transform-style: preserve-3d; will-change: transform; transition: box-shadow .3s ease; }
+[data-tilt]:hover { box-shadow: var(--shadow-xl); }
+.js-tilt-glare { border-radius: inherit; }
+
+/* animated gradient headline */
+.gradient-text {
+  background: linear-gradient(100deg,#0d9488,#06b6d4,#7c3aed,#0d9488);
+  background-size: 300% 100%;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: hueShift 8s ease infinite;
+}
+@keyframes hueShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+/* glassmorphism navbar when scrolled */
+.navbar.scrolled { backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); background: rgba(255,255,255,.72); }
+
+/* richer scroll reveal */
+.reveal-3d { opacity: 0; transform: perspective(900px) rotateX(12deg) translateY(30px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal-3d.in { opacity: 1; transform: perspective(900px) rotateX(0) translateY(0); }
+
+/* button shine on hover */
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after { content:""; position:absolute; top:0; left:-120%; width:60%; height:100%; background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent); transform:skewX(-20deg); transition:left .6s ease; }
+.btn-primary:hover::after { left:140%; }
+
+@media (max-width: 820px) {
+  .hero-scene .o2, .hero-scene .o4, .hero-scene .o6, .hero-scene .o8 { display: none; }
+  .hero-scene .organ { width: 62px !important; opacity:.9; }
+  .hero-scene .o1 { top: 6%; left: 2%; } .hero-scene .o7 { bottom: 6%; right: 2%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-scene .organ, .hero-orbs .orb, .gradient-text { animation: none !important; }
+}

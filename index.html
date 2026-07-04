@@ -47,6 +47,17 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="hero-bg-grid"></div>
+    <div class="hero-orbs"><span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span></div>
+    <div class="hero-scene" id="heroScene" aria-hidden="true">
+      <img class="organ o1" data-depth="4" src="assets/organs/heart.png" alt="">
+      <img class="organ o2" data-depth="2.4" src="assets/organs/brain.png" alt="">
+      <img class="organ o3" data-depth="3.2" src="assets/organs/lungs.png" alt="">
+      <img class="organ o4" data-depth="1.8" src="assets/organs/tooth.png" alt="">
+      <img class="organ o5" data-depth="2.8" src="assets/organs/pill.png" alt="">
+      <img class="organ o6" data-depth="3.6" src="assets/organs/dna.png" alt="">
+      <img class="organ o7" data-depth="2.2" src="assets/organs/stethoscope.png" alt="">
+      <img class="organ o8" data-depth="1.6" src="assets/organs/syringe.png" alt="">
+    </div>
     <div class="container">
       <div class="hero-badge">
         <span class="pulse-dot"></span>
@@ -104,28 +115,28 @@
         <p class="section-desc">Pakistan's healthcare system relies on fragmented paper records, illegible prescriptions, and zero digital infrastructure connecting stakeholders.</p>
       </div>
       <div class="problem-grid">
-        <div class="problem-card">
+        <div class="problem-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <div class="problem-icon red">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
           </div>
           <h3>Paper Prescriptions</h3>
           <p>85% of prescriptions are handwritten, often illegible, leading to medication errors and no digital trail for follow-ups.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <div class="problem-icon orange">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
           <h3>No Patient History</h3>
           <p>Patients carry physical folders of reports. Doctors have no access to prior medical history, leading to redundant tests and misdiagnosis.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <div class="problem-icon yellow">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           </div>
           <h3>Medication Errors</h3>
           <p>WHO estimates 1.3M deaths/year from medication errors globally. Pakistan lacks any system to verify prescriptions digitally.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <div class="problem-icon purple">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
           </div>
@@ -214,42 +225,42 @@
       <!-- Doctor Features -->
       <div class="tab-content active" id="tab-doctor">
         <div class="features-grid">
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon blue">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
             </div>
             <h4>QR Code Scanner</h4>
             <p>Scan patient QR to instantly access their full medical profile and history.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon blue">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             </div>
             <h4>Digital Prescriptions</h4>
             <p>Write prescriptions with medications, dosage, frequency, vitals, and lab requests. Auto-generates PDF.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon blue">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
             <h4>Patient Management</h4>
             <p>View all patients, their records, past prescriptions, and upcoming appointments in one dashboard.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon blue">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
             <h4>Appointments</h4>
             <p>Manage appointment slots, patient bookings, and schedule with calendar integration.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon blue">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
             <h4>Vitals Tracking</h4>
             <p>Record blood pressure, sugar levels, and other vitals directly in prescriptions.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon blue">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
@@ -262,42 +273,42 @@
       <!-- Patient Features -->
       <div class="tab-content" id="tab-patient">
         <div class="features-grid">
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon green">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h.01M7 12h.01M7 17h.01M12 7h.01M12 12h.01M12 17h.01M17 7h.01M17 12h.01"/></svg>
             </div>
             <h4>Personal QR Code</h4>
             <p>Your unique medical identity. Show it to any doctor for instant access to your history.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon green">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             </div>
             <h4>Prescription Details</h4>
             <p>Every prescription shows medications, dosage, frequency, duration, and doctor notes in a clear, readable format.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon green">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
             <h4>Medication Tracker</h4>
             <p>Set reminders and track daily medication intake. Never miss a dose again.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon green">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
             </div>
             <h4>Medical Records</h4>
             <p>Upload and organize lab reports, X-rays, and documents in folders. Access anywhere.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon green">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </div>
             <h4>PDF Downloads</h4>
             <p>Download prescription PDFs with complete doctor info, medications, vitals, and clinic details.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon green">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
             </div>
@@ -310,42 +321,42 @@
       <!-- Admin Features -->
       <div class="tab-content" id="tab-admin">
         <div class="features-grid">
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon purple">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h4>Doctor Verification</h4>
             <p>Review and approve doctor registrations. Verify PMC license numbers before granting access.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon purple">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
             <h4>User Management</h4>
             <p>Manage all doctors, patients, and staff. View activity, suspend accounts, and handle disputes.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon purple">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
             </div>
             <h4>Audit Logs</h4>
             <p>Complete audit trail of all actions. Track who accessed what, when, for compliance and security.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon purple">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
             </div>
             <h4>Analytics Dashboard</h4>
             <p>Platform-wide statistics: active users, prescriptions generated, appointments, and growth metrics.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon purple">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
             </div>
             <h4>Subscription Management</h4>
             <p>Manage clinic subscriptions, billing, and feature tiers for different plan levels.</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
             <div class="feature-icon purple">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             </div>
@@ -568,22 +579,22 @@
         <p class="section-desc">Pakistan's healthcare digitization is inevitable. We're building the infrastructure.</p>
       </div>
       <div class="market-grid">
-        <div class="market-card">
+        <div class="market-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <span class="market-number">230M+</span>
           <h4>Population</h4>
           <p>5th largest country. Growing 2% annually. Massive underserved market.</p>
         </div>
-        <div class="market-card">
+        <div class="market-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <span class="market-number">270K+</span>
           <h4>Registered Doctors</h4>
           <p>PMC-registered doctors with zero digital prescription tools.</p>
         </div>
-        <div class="market-card">
+        <div class="market-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <span class="market-number">$4.2B</span>
           <h4>Healthcare Spend</h4>
           <p>Annual healthcare expenditure growing 12% year-over-year.</p>
         </div>
-        <div class="market-card">
+        <div class="market-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <span class="market-number">< 5%</span>
           <h4>Digital Adoption</h4>
           <p>Virtually no digital health records. Greenfield opportunity.</p>
@@ -668,7 +679,7 @@
         <p class="section-desc">A passionate team solving healthcare's biggest challenge in Pakistan.</p>
       </div>
       <div class="team-grid">
-        <div class="team-card">
+        <div class="team-card" data-tilt data-tilt-max="8" data-tilt-glare data-tilt-max-glare="0.15">
           <div class="team-avatar">
             <div class="avatar-placeholder">SR</div>
           </div>
@@ -756,6 +767,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

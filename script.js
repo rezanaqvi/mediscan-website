@@ -133,3 +133,47 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ============================================================
+// Dynamic 3D layer — parallax organs, tilt, scroll reveals
+// ============================================================
+
+// Mouse / scroll parallax for the floating organs
+(function () {
+  const scene = document.getElementById('heroScene');
+  if (!scene) return;
+  const organs = Array.from(scene.querySelectorAll('.organ'));
+  let mx = 0, my = 0, sy = 0;
+  function apply() {
+    organs.forEach((o) => {
+      const d = parseFloat(o.dataset.depth || '2');
+      o.style.transform = `translate3d(${mx * d}px, ${my * d + sy * d * 0.6}px, 0)`;
+    });
+  }
+  window.addEventListener('mousemove', (e) => {
+    mx = (e.clientX / window.innerWidth - 0.5) * 24;
+    my = (e.clientY / window.innerHeight - 0.5) * 24;
+    apply();
+  }, { passive: true });
+  window.addEventListener('scroll', () => {
+    sy = Math.min(window.scrollY, 600) / 600 * -14;
+    apply();
+  }, { passive: true });
+})();
+
+// Initialise vanilla-tilt on tagged cards (respect reduced motion)
+if (window.VanillaTilt && !matchMedia('(prefers-reduced-motion: reduce)').matches && matchMedia('(hover: hover)').matches) {
+  VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+    speed: 500, glare: true, 'max-glare': 0.15, max: 8, scale: 1.02,
+  });
+}
+
+// Richer 3D scroll reveal for section headers + rows
+(function () {
+  const targets = document.querySelectorAll('.section-header, .flow-container, .demo-cta, .cta-content, .roadmap-item');
+  targets.forEach((t) => t.classList.add('reveal-3d'));
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach((t) => io.observe(t));
+})();
