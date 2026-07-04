@@ -466,6 +466,31 @@
       .step.reverse { direction: ltr; }
       .topbar-nav { display: none; }
     }
+  
+/* ---- Real app screenshots in phone frames ---- */
+.shots-section { margin: 40px 0 10px; }
+.shots-rail { display: flex; gap: 32px; overflow-x: auto; padding: 24px 4px 34px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.shots-rail::-webkit-scrollbar { height: 8px; } .shots-rail::-webkit-scrollbar-thumb { background: #14b8a6aa; border-radius: 8px; }
+.shot { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
+.phone { position: relative; width: 250px; aspect-ratio: 400/860; border-radius: 40px; padding: 11px; margin: 0 auto;
+  background: linear-gradient(160deg,#263238,#0b0f14); box-shadow: 0 34px 60px -22px rgba(2,44,34,.55), inset 0 0 0 2px rgba(255,255,255,.06);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+.phone:hover { transform: translateY(-8px) rotateX(4deg) rotateY(-4deg); }
+.phone::before { content:""; position:absolute; top:15px; left:50%; transform:translateX(-50%); width:78px; height:19px; background:#0b0f14; border-radius:12px; z-index:3; }
+.phone img { width:100%; height:100%; object-fit:cover; object-position: top; border-radius:30px; display:block; background:#fff; }
+.shot figcaption { margin-top: 16px; font-weight: 600; color: var(--text, #134e4a); font-size: .95rem; }
+.shot small { display:block; color: var(--text-muted,#5f7a78); font-weight:400; font-size:.82rem; margin-top:2px; }
+
+/* ---- FAQ ---- */
+.faq-section { margin: 50px 0; }
+.faq { max-width: 780px; margin: 24px auto 0; display: grid; gap: 12px; }
+.faq details { background:#fff; border:1px solid var(--border,#ccfbf1); border-radius:14px; padding: 4px 18px; box-shadow: 0 6px 20px -12px rgba(2,44,34,.15); }
+.faq summary { list-style:none; cursor:pointer; font-weight:600; color: var(--text,#134e4a); padding: 14px 0; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.faq summary::-webkit-details-marker { display:none; }
+.faq summary::after { content:"+"; font-size:1.4rem; color: var(--primary,#0d9488); transition:transform .25s ease; line-height:1; }
+.faq details[open] summary::after { transform:rotate(45deg); }
+.faq details p { margin: 0 0 16px; color: var(--text-muted,#5f7a78); line-height:1.6; font-size:.95rem; }
+
   </style>
 </head>
 <body>
@@ -497,6 +522,23 @@
       <h1>Product <span class="gradient">Walkthrough</span></h1>
       <p>Follow the complete user journey through MediScan — from patient signup to AI-powered prescription insights.</p>
     </div>
+
+    <!-- Real app screenshots -->
+    <section class="shots-section">
+      <div class="demo-header">
+        <h2 style="font-size:2rem">See the App <span class="gradient">in Action</span></h2>
+        <p>Real screens from the live MediScan patient app — swipe through.</p>
+      </div>
+      <div class="shots-rail">
+        <figure class="shot"><div class="phone"><img src="assets/shots/dashboard.png" alt="Health dashboard" loading="lazy"></div><figcaption>Health Overview<small>Live vitals, BMI &amp; trends</small></figcaption></figure>
+        <figure class="shot"><div class="phone"><img src="assets/shots/records.png" alt="Medical records" loading="lazy"></div><figcaption>Medical Records<small>Prescriptions, labs &amp; reports</small></figcaption></figure>
+        <figure class="shot"><div class="phone"><img src="assets/shots/appointments.png" alt="Book appointment" loading="lazy"></div><figcaption>Book a Doctor<small>By specialty, city &amp; slot</small></figcaption></figure>
+        <figure class="shot"><div class="phone"><img src="assets/shots/qr.png" alt="QR code" loading="lazy"></div><figcaption>My QR Code<small>Consent-based sharing</small></figcaption></figure>
+        <figure class="shot"><div class="phone"><img src="assets/shots/family.png" alt="Family profiles" loading="lazy"></div><figcaption>Family &amp; Dependents<small>Manage the whole family</small></figcaption></figure>
+        <figure class="shot"><div class="phone"><img src="assets/shots/prescriptions.png" alt="Prescriptions" loading="lazy"></div><figcaption>Prescriptions<small>Track medications</small></figcaption></figure>
+      </div>
+    </section>
+
 
     <!-- STEP 1: Patient Sign Up -->
     <div class="step" id="step1">
@@ -906,6 +948,25 @@
         </div>
       </div>
     </div>
+
+    
+    <!-- Q&A -->
+    <section class="faq-section">
+      <div class="demo-header">
+        <h2 style="font-size:2rem">Questions &amp; <span class="gradient">Answers</span></h2>
+        <p>Everything you need to know about how MediScan works.</p>
+      </div>
+      <div class="faq">
+        <details open><summary>What exactly is MediScan?</summary><p>MediScan is a QR-based digital health platform for Pakistan. Patients store their medical records, prescriptions and lab reports in one place, share them instantly with any doctor via a QR code, and manage appointments — replacing paper prescriptions and scattered files.</p></details>
+        <details><summary>How does sharing my records with a doctor work?</summary><p>You show your personal QR code; the doctor scans it and requests access. You then receive a one-time consent code <strong>both in the app and by email</strong> — you share it only if you agree. The doctor gets time-limited access, and you can revoke it any time. No one sees your records without your explicit consent.</p></details>
+        <details><summary>Is my health data private and secure?</summary><p>Yes. Access is strictly consent-based, every access is recorded in an audit log, and you own your records. Sensitive identifiers are encrypted, and you decide exactly which doctor can view your data and for how long.</p></details>
+        <details><summary>Does MediScan diagnose illnesses or prescribe medicine?</summary><p>No. MediScan does not diagnose, prescribe, or replace a healthcare professional. It is a records, prescription and appointment platform — all medical decisions stay with your licensed doctor.</p></details>
+        <details><summary>What health data can I track?</summary><p>Blood pressure, blood sugar, heart rate, blood oxygen (SpO₂), temperature, and weight/height with automatic BMI — each with trend charts and a normal/elevated/high status. You can also upload lab reports and store prescriptions.</p></details>
+        <details><summary>Can I manage my family's health too?</summary><p>Yes. You can add dependents — children or elderly parents — and switch between their profiles from one account, so a whole family's records live in one place.</p></details>
+        <details><summary>How do doctors join, and how is trust ensured?</summary><p>Doctors sign up with their specialization, city/area and clinic address. Each doctor account is reviewed and approved by an admin before it goes live, so patients only connect with verified practitioners.</p></details>
+        <details><summary>Is it available now, and what does it cost?</summary><p>MediScan is in beta and fully functional. It's available as an Android app and a web app today — download links are below.</p></details>
+      </div>
+    </section>
 
     <!-- CTA -->
     <div class="demo-cta">
